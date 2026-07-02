@@ -2,7 +2,7 @@ import {DefaultArtifactClient} from '@actions/artifact'
 
 async function uploadSarifArtifact(filename: string): Promise<void> {
   const artifactClient = new DefaultArtifactClient()
-  const now = Math.floor(new Date().getTime() / 1000)
+  const now = Math.floor(Date.now() / 1000)
   const artifactName = `ZAProxy-sarif-report-${now}`
   const files = [filename]
 
